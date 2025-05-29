@@ -3,162 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog de Martina - IA vs Humanos</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>Blog sobre viajes</title>
+    <link rel="icon" href="static/image.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <h1>Blog de Martina - IA vs Humanos</h1>
+      <h1>Blog sobre viajes</h1>
       <nav>
         <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#articulos">Artículos</a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="articles.html">Artículos</a></li>
           <li><a href="#contacto">Contacto</a></li>
+          <li><a href="../index.html">LinkTree</a></li>
         </ul>
       </nav>
     </header>
 
-    <main id="articulos">
+    <main>
+      <section id="bienvenida">
+        <h2>¡Bienvenida a mi blog de viajes! 🌍✈️</h2>
+        <p>
+          Soy Martina, una apasionada por descubrir el mundo. En este espacio
+          comparto tips, experiencias y consejos útiles para que puedas
+          organizar tus propios viajes de forma más fácil, económica y
+          divertida.
+        </p>
+      </section>
       <section class="articulos">
         <article>
-          <h2>
-            El punto ciego de ChatGPT: La ilusión de conocimiento en la era de
-            la inteligencia artificial generativa
-          </h2>
+          <h2>✈️ Cómo empacar ligero sin olvidar lo esencial</h2>
           <picture>
             <img
-              src="static/1.webp"
-              alt="Representación simbólica de IA y moral"
+              src="static/viaje1.jpg"
+              alt="Maleta organizada para viajar ligero"
               loading="lazy"
             />
           </picture>
           <p>
-            El artículo analiza cómo la inteligencia artificial generativa,
-            aunque eficiente, carece de verdadero conocimiento. Se basa en datos
-            preexistentes sin juicio crítico ni imaginación, lo que puede llevar
-            a confundir información con conocimiento real. Advierte sobre los
-            riesgos sociales de asumir que la IA genera saber auténtico.
+            Empacar de forma inteligente es clave para viajar cómodo. Te
+            compartimos una guía práctica para llevar solo lo necesario, sin
+            renunciar a tus básicos imprescindibles.
           </p>
-          <time datetime="2025-05-28">28 de mayo de 2025</time>
-          <a
-            href="https://elpais.com/opinion/2025-05-28/el-punto-ciego-de-chatgpt.html"
-            class="leer-mas"
-            target="_blank"
-            >Leer más</a
-          >
+          <div class="fecha-leer">
+            <time datetime="2025-05-28">28 de mayo de 2025</time>
+            <a href="empacar-ligero.html" class="leer-mas">Leer más</a>
+          </div>
         </article>
 
         <article>
-          <h2>
-            La IA en entrevistas laborales: ¿eficiencia o deshumanización?
-          </h2>
+          <h2>🛏️ Cómo encontrar alojamiento barato y seguro</h2>
           <picture>
             <img
-              src="static/2.jpg"
-              alt="IA en entrevistas laborales"
+              src="static/viaje2.jpg"
+              alt="Habitación de hostel cómoda y económica"
               loading="lazy"
             />
           </picture>
           <p>
-            La inteligencia artificial está comenzando a usarse en entrevistas
-            de trabajo, con sistemas automatizados que evalúan a los candidatos.
-            Sin embargo, algunos procesos fallan, generando experiencias
-            frustrantes y deshumanizadas, como en el caso de Leo Humphries,
-            quien descubrió que su entrevistador era una IA con problemas
-            técnicos. Expertos advierten que, aunque la IA puede reducir costos,
-            priorizarla sobre la experiencia humana puede perjudicar a los
-            postulantes.
+            Desde hostels hasta casas compartidas, conocer dónde y cómo buscar
+            te ahorra dinero y dolores de cabeza. Te dejamos herramientas y
+            consejos de seguridad.
           </p>
-          <time datetime="2025-05-24">24 de mayo de 2025</time>
-          <a
-            href="https://cadenaser.com/nacional/hype/2025/05/24/un-hombre-se-escandaliza-con-lo-que-ve-en-una-entrevista-laboral-y-un-experto-alerta-que-es-solo-la-punta-del-iceberg-cadena-ser/"
-            class="leer-mas"
-            target="_blank"
-            >Leer más</a
-          >
+          <div class="fecha-leer">
+            <time datetime="2025-05-24">24 de mayo de 2025</time>
+            <a href="alojamiento-economico.html" class="leer-mas">Leer más</a>
+          </div>
         </article>
 
         <article>
-          <h2>IA vs. habilidades humanas: el desafío empresarial</h2>
+          <h2>🍜 Comer bien viajando: tips para ahorrar y disfrutar</h2>
           <picture>
             <img
-              src="static/3.webp"
-              alt="IA vs habilidades humanas"
+              src="static/viaje3.jpg"
+              alt="Comida típica y económica para viajeros"
               loading="lazy"
             />
           </picture>
           <p>
-            La película Yo Robot plantea preguntas sobre si la inteligencia
-            artificial podrá superar al ser humano en áreas creativas y cuál
-            será su impacto laboral. Estudios muestran que los humanos tienen
-            dificultad para distinguir textos generados por IA, lo que expone
-            riesgos de desinformación. Además, la IA genera contenido sin
-            verdadera comprensión, lo que resalta la importancia de desarrollar
-            pensamiento crítico y habilidades de comprensión en las futuras
-            generaciones. La educación y el entrenamiento en comunicación serán
-            clave para que la IA sea una aliada y no una amenaza en el trabajo y
-            la sociedad.
+            Probar la gastronomía local no tiene que romper tu presupuesto.
+            Descubrí cómo encontrar comida rica, típica y barata, ¡y evitar caer
+            en trampas para turistas!
           </p>
-          <time datetime="2024-10-27">27 Noviembre de 2024</time>
-          <a
-            href="https://www.forbesargentina.com/columnistas/ia-vs-habilidades-humanas-desafio-empresarial-n63381"
-            class="leer-mas"
-            target="_blank"
-            >Leer más</a
-          >
+          <div class="fecha-leer">
+            <time datetime="2025-05-21">21 de mayo de 2025</time>
+            <a href="comer-barato-viajando.html" class="leer-mas">Leer más</a>
+          </div>
         </article>
 
         <article>
-          <h2>
-            Cuando las máquinas superaron a los humanos: los hitos de la
-            inteligencia artificial
-          </h2>
+          <h2>🌍 Aplicaciones esenciales para todo viajero</h2>
           <picture>
             <img
-              src="static/3.jpg"
-              alt="Representación simbólica de IA y moral"
+              src="static/viaje4.png"
+              alt="Celular con aplicaciones de viaje abiertas"
               loading="lazy"
             />
           </picture>
           <p>
-            La IA ha vencido a humanos en juegos complejos como ajedrez y Go,
-            demostrando su capacidad de adaptación. Más allá del
-            entretenimiento, ya impacta sectores como la medicina. Sin embargo,
-            plantea debates sobre límites éticos y sociales, y cómo conviviremos
-            con máquinas cada vez más inteligentes.
+            Mapas offline, traductores, conversores de moneda y más: un listado
+            actualizado de apps gratuitas que te salvan en cualquier parte del
+            mundo.
           </p>
-          <time datetime="2024-12-26">26 de diciembre de 2024</time>
-          <a
-            href="https://www.infobae.com/tecno/2024/12/26/cuando-las-maquinas-superaron-a-los-humanos-los-hitos-de-la-inteligencia-artificial/"
-            class="leer-mas"
-            target="_blank"
-            >Leer más</a
-          >
+          <div class="fecha-leer">
+            <time datetime="2025-05-19">19 de mayo de 2025</time>
+            <a href="apps-para-viajeros.html" class="leer-mas">Leer más</a>
+          </div>
         </article>
 
         <article>
-          <h2>El nuevo rol del docente en la era de la IA</h2>
+          <h2>🧭 Viajar sola: cómo prepararte y disfrutar la experiencia</h2>
           <picture>
             <img
-              src="static/4.jpg"
-              alt="El nuevo rol del docente en la era de la IA"
+              src="static/viaje5.webp"
+              alt="Mujer viajando sola con mochila"
               loading="lazy"
             />
           </picture>
           <p>
-            Programas como PaideIA buscan transformar la educación con IA, pero
-            el cambio real será estructural. La tecnología redefine el rol
-            docente como guía del aprendizaje. Se necesita una reforma profunda
-            en salarios, formación y evaluación para integrar la tecnología sin
-            perder la presencialidad.
+            Viajar sola es transformador. En este artículo te damos tips para
+            sentirte segura, conectada y libre en cada destino.
           </p>
-          <time datetime="2025-05-27">27 de mayo de 2025</time>
-          <a
-            href="https://www.clarin.com/opinion/nuevo-rol-docente-ia_0_PsWQOQHIgi.html"
-            class="leer-mas"
-            target="_blank"
-            >Leer más</a
-          >
+          <div class="fecha-leer">
+            <time datetime="2025-05-15">15 de mayo de 2025</time>
+            <a href="viajar-sola.html" class="leer-mas">Leer más</a>
+          </div>
         </article>
       </section>
 

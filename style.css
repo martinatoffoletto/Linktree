@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background: linear-gradient(135deg, #f7c6d9, #d3a0f9);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4a4a4a;
+}
+
+.linktree-card {
+  background-color: #ffffffcc;
+  border-radius: 1.25rem;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+}
+
+.linktree-card h1 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.linktree-card a {
+  display: block;
+  margin: 1rem 0;
+  padding: 0.85rem 1rem;
+  background-color: white;
+  text-decoration: none;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.linktree-card a:hover {
+  background-color: rgb(241, 195, 232);
+}

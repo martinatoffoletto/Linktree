@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.6;
+  color: #2c3e50;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #2a5c8e;
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+nav a:hover {
+  color: black;
+}
+
+/* --------- main - articulos --------- */
+
+main {
+  margin: 3rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #3498db;
+}
+
+#bienvenida {
+  margin-bottom: 3rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+#bienvenida p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.articulos {
+  display: grid;
+  gap: 4rem;
+  margin: 7rem 0;
+  padding: 0 1rem;
+}
+
+.articulos article {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 4rem;
+  height: 95%;
+}
+
+.articulos article h2 {
+  font-size: 1.2rem;
+  min-height: 3.5em;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+}
+
+.articulos article picture {
+  height: 180px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.articulos article picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fecha-leer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.leer-mas {
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-size: 0.9rem;
+}
+
+.leer-mas:hover {
+  background-color: #2980b9;
+}
+
+/* --------- MAIN - Contacto --------- */
+#contacto {
+  margin-top: 6rem;
+  padding: 1rem;
+}
+form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+input,
+textarea {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  font-family: "Lato", sans-serif;
+}
+
+button {
+  padding: 0.75rem 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #2980b9;
+  box-shadow: 0 4px 12px rgba(41, 128, 185, 0.5);
+}
+
+/* --------- Footer --------- */
+footer {
+  background-color: #ecf0f1;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+}
+
+/* --------- Lista de artículos --------- */
+#lista-articulos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  align-items: center;
+}
+
+#lista-articulos article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  width: 700px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  font-family: "Lato", sans-serif;
+  flex-wrap: wrap;
+}
+
+#lista-articulos article div {
+  display: flex;
+  flex-direction: column;
+}
+
+#lista-articulos h3 {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+#lista-articulos time {
+  font-size: 0.9em;
+  color: #777;
+}
+
+#lista-articulos .leer-mas {
+  text-decoration: none;
+  color: white;
+  background-color: #007bff;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+#lista-articulos .leer-mas:hover {
+  background-color: #0056b3;
+}
+
+/* --------- Estilos para la página de artículos --------- */
+
+.articulo-completo {
+  background-color: white;
+  padding: 2rem 2.5rem;
+  width: 85%;
+  margin: 2rem auto;
+  font-family: "Lato", sans-serif;
+  color: #2c3e50;
+}
+
+.articulo-completo h2 {
+  font-size: 2rem;
+  color: #2a5c8e;
+  margin-bottom: 0.3rem;
+}
+
+.articulo-completo time {
+  font-size: 0.9rem;
+  color: #777;
+  font-style: normal;
+}
+
+.articulo-completo picture {
+  display: block;
+  margin: 1.5rem 0;
+  height: auto;
+  max-height: 50rem;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.articulo-completo picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.articulo-completo p {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  color: #444;
+}
+
+.articulo-completo section {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid #3498db;
+}
+
+.articulo-completo section h3 {
+  font-size: 1.5rem;
+  color: #3498db;
+  margin-bottom: 1rem;
+}
+
+.articulo-completo section p {
+  font-size: 1rem;
+  line-height: 1.5;
+  white-space: pre-line;
+  color: #555;
+}
+
+/* --------- Responsive Design --------- */
+
+/* Media Query para Móvil (<768px) */
+@media (max-width: 767px) {
+  .articulos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  form {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  #lista-articulos article {
+    width: 100%;
+  }
+
+  .articulo-completo {
+    width: 95%;
+    margin: 1rem auto;
+  }
+
+  .articulo-completo picture {
+    height: 15rem;
+  }
+}
+
+/* Media Query para Escritorio (≥1024px) */
+@media (min-width: 1024px) {
+  .articulos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  #lista-articulos article {
+    width: 700px;
+  }
+}
