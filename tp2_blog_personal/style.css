@@ -74,16 +74,25 @@ h2 {
 }
 
 .articulos article {
-  background-color: white;
+  background-color: #ededff;
+  border: 1px solid #ddd; 
+  border-left: 4px solid #3498db;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
-  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  padding: 1.2rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
   margin-bottom: 4rem;
   height: 95%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.articulos article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
 
 .articulos article h2 {
   font-size: 1.2rem;
@@ -138,7 +147,7 @@ form {
   flex-direction: column;
   gap: 1.5rem;
   padding: 2rem;
-  background: white;
+  background: rgb(214, 217, 243);
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
@@ -231,35 +240,39 @@ footer {
 }
 
 /* --------- Estilos para la página de artículos --------- */
-
 .articulo-completo {
   background-color: white;
   padding: 2rem 2.5rem;
-  width: 85%;
+  width: 90%;
+  max-width: 800px;
   margin: 2rem auto;
   font-family: "Lato", sans-serif;
   color: #2c3e50;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.03);
+  border-radius: 12px;
 }
 
 .articulo-completo h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #2a5c8e;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .articulo-completo time {
-  font-size: 0.9rem;
+  display: block;
+  text-align: center;
+  font-size: 0.95rem;
   color: #777;
   font-style: normal;
+  margin-bottom: 1.5rem;
 }
 
 .articulo-completo picture {
   display: block;
-  margin: 1.5rem 0;
-  height: auto;
-  max-height: 50rem;
+  margin: 0 auto 2rem;
+  max-width: 100%;
   border-radius: 12px;
-  position: relative;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -274,8 +287,9 @@ footer {
 
 .articulo-completo p {
   font-size: 1.1rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.4rem;
   color: #444;
+  line-height: 1.6;
 }
 
 .articulo-completo section {
@@ -285,17 +299,50 @@ footer {
 }
 
 .articulo-completo section h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #3498db;
   margin-bottom: 1rem;
 }
 
-.articulo-completo section p {
+.articulo-completo section p,
+.articulo-completo section ul {
   font-size: 1rem;
-  line-height: 1.5;
-  white-space: pre-line;
+  line-height: 1.6;
   color: #555;
+  margin-bottom: 1rem;
 }
+
+.articulo-completo ul {
+  padding-left: 1.5rem;
+}
+
+.articulo-completo ul li {
+  margin-bottom: 0.5rem;
+}
+
+.navegacion-articulos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1.5rem;
+  font-size: 1rem;
+}
+
+.navegacion-articulos a {
+  color: #2a5c8e;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navegacion-articulos a:hover {
+  color: #1d3d64;
+}
+
+
+
+
 
 /* --------- Responsive Design --------- */
 
@@ -316,13 +363,26 @@ footer {
     width: 100%;
   }
 
-  .articulo-completo {
-    width: 95%;
-    margin: 1rem auto;
-  }
-
   .articulo-completo picture {
     height: 15rem;
+  }
+
+  .articulo-completo {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .articulo-completo h2 {
+    font-size: 1.6rem;
+  }
+
+  .articulo-completo section h3 {
+    font-size: 1.3rem;
+  }
+
+  .navegacion-articulos {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 }
 
