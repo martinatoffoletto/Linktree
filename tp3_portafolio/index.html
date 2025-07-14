@@ -24,51 +24,114 @@
       </ul>
     </nav>
   </header>
-
   <main>
-    <section id="inicio" class="inicio">
-      <div class="inicio-contenido">
-        <h2>¡Hola! Soy Martina</h2>
-        <p>Soy estudiante de Ingeniería Informática. Bienvenida a mi portfolio personal, donde vas a poder conocer mis proyectos, habilidades, y un poco sobre mí.</p>
-        <a href="#trabajos" class="btn">Ver proyectos</a>
-        <a href="static/martin_toffoletto_cv.pdf" class="btn secundario" download>Descargar CV</a>
-        <div class="preview-secciones">
-          <h3>¿Qué vas a encontrar en esta web?</h3>
-          <ul>
-            <li>📌 <strong>Sobre mí:</strong> una breve presentación personal, intereses y objetivos profesionales.</li>
-            <li>🛠️ <strong>Proyectos destacados:</strong> como la aplicación de cocina <em>ChefHub</em>, el juego <em>GuessNum</em> y el <em>Tateti</em> desarrollados en Android con Java.</li>
-            <li>💻 <strong>Ejercicios interactivos:</strong> en JavaScript puro y CSS. Incluyen una lista de tareas con almacenamiento local, una galería con imágenes y un menú dinámico cargado desde JSON.</li>
-            <li>🎯 <strong>Habilidades técnicas:</strong> desarrollo web (HTML, CSS, JS), diseño responsive con Flexbox y Grid, trabajo con APIs, y experiencia en programación orientada a objetos con Java.</li>
-            <li>🧩 <strong>Experiencia práctica:</strong> tanto en proyectos grupales como individuales. Me esfuerzo por aplicar buenas prácticas de diseño UI/UX y código limpio.</li>
-            <li>📬 <strong>Formulario de contacto:</strong> para comunicarte directamente conmigo si te interesa saber más o colaborar.</li>
-          </ul>
+    <section id="inicio" class="inicio-portada">
+        <div class="overlay"></div>
+        <div class="portada-contenido">
+          <h1>¡Hola! Soy Martina</h1>
+          <p>Estudiante de Ingeniería Informática, enfocada en desarrollo web y diseño de experiencias digitales.</p>
+          <a href="static/martin_toffoletto_cv.pdf" class="btn" download>Descargar CV</a>
+        </div>
+    </section>
+    <section id="sobre-mi" class="sobre-mi">
+      <div class="contenedor-sobre-mi">
+        <div class="foto-sobre-mi">
+          <img src="static/foto.jpg" alt="Foto de Martina Toffoletto" />
+        </div>
+        <div class="texto-sobre-mi">
+          <h2>Sobre mí</h2>
+          <p>Mi nombre es Martina Toffoletto. Actualmente estoy estudiando Ingeniería Informática y me interesa todo lo relacionado con el desarrollo de software, la experiencia de usuario, y la tecnología en general.</p>
+          <p>Disfruto aprender nuevas herramientas, participar en proyectos creativos, y desarrollar soluciones útiles que combinen lógica y diseño. Me considero curiosa, detallista, y con ganas de seguir creciendo profesionalmente.</p>
+          <p>En esta web vas a encontrar algunos de mis trabajos destacados, ejercicios interactivos, habilidades técnicas y formas de contactarme.</p>
         </div>
       </div>
-      <div class="inicio-imagen">
-        <img src="static/foto.jpg" alt="Foto de Martina">
+    </section>
+    <section id="trabajos" class="proyectos" style="max-width: 480px; margin: 40px auto; font-family: Arial, sans-serif;">
+      <h2 style="text-align:center; margin-bottom: 25px;">Mis Proyectos</h2>
+
+      <div class="btn-group">
+        <button class="btn toggle-btn" data-target="calculadora">Calculadora</button>
+        <button class="btn toggle-btn" data-target="galeria">Galería</button>
+        <button class="btn toggle-btn" data-target="botonera">Botonera de Sonidos</button>
+      </div>
+
+      <!-- CALCULADORA Modal -->
+      <div id="calculadora" class="modal" role="dialog" aria-modal="true" aria-labelledby="titulo-calculadora">
+        <div class="modal-content">
+          <button class="modal-close" aria-label="Cerrar">&times;</button>
+          <h3 id="titulo-calculadora">Calculadora</h3>
+          <input type="text" id="pantalla" readonly>
+          <div class="teclado">
+            <button class="btn-calc" data-valor="7">7</button>
+            <button class="btn-calc" data-valor="8">8</button>
+            <button class="btn-calc" data-valor="9">9</button>
+            <button class="btn-calc" data-valor="/">÷</button>
+            <button class="btn-calc" data-valor="4">4</button>
+            <button class="btn-calc" data-valor="5">5</button>
+            <button class="btn-calc" data-valor="6">6</button>
+            <button class="btn-calc" data-valor="*">×</button>
+            <button class="btn-calc" data-valor="1">1</button>
+            <button class="btn-calc" data-valor="2">2</button>
+            <button class="btn-calc" data-valor="3">3</button>
+            <button class="btn-calc" data-valor="-">−</button>
+            <button class="btn-calc" data-valor="0">0</button>
+            <button class="btn-calc" data-valor=".">.</button>
+            <button class="btn-calc" data-valor="=">=</button>
+            <button class="btn-calc" data-valor="+">+</button>
+            <button class="btn-calc" data-valor="C">C</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- GALERÍA Modal -->
+      <div id="galeria" class="modal" role="dialog" aria-modal="true" aria-labelledby="titulo-galeria">
+        <div class="modal-content">
+          <button class="modal-close" aria-label="Cerrar">&times;</button>
+          <h3 id="titulo-galeria">Galería de Imágenes</h3>
+          <img id="imagen-galeria" src="" alt="Imagen de galería" />
+          <div class="galeria-botones-container">
+            <button id="btn-anterior" class="btn">Anterior</button>
+            <button id="btn-siguiente" class="btn">Siguiente</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTONERA DE SONIDOS Modal -->
+      <div id="botonera" class="modal" role="dialog" aria-modal="true" aria-labelledby="titulo-botonera">
+        <div class="modal-content">
+          <button class="modal-close" aria-label="Cerrar">&times;</button>
+          <h3 id="titulo-botonera">Botonera de Sonidos</h3>
+          <div class="btn-group">
+            <button id="btn-sonido1" class="btn">Sonido 1</button>
+            <button id="btn-sonido2" class="btn">Sonido 2</button>
+            <button id="btn-sonido3" class="btn">Sonido 3</button>
+          </div>
+          <!-- Botón mute generado desde JS -->
+        </div>
       </div>
     </section>
 
-    <section id="trabajos" class="proyectos">
-      <h2>Proyectos Destacados</h2>
-      <div class="card-proyecto">
-        <h3>ChefHub - App de cocina</h3>
-        <p>ChefHub es una aplicación Android diseñada para ayudarte a organizar tus recetas de cocina de manera intuitiva. Incluye funcionalidades como favoritos, buscador y detalles personalizados de cada receta.</p>
-        <div class="btn-group">
-          <a class="btn" href="https://github.com/martinatoffoletto/chefhub2.0" target="_blank">Ver en GitHub</a>
+    <section id="habilidades" class="habilidades">
+      <h2>Habilidades Técnicas</h2>
+      <div class="habilidades-container">
+        <div class="habilidad">
+          <h3>HTML</h3>
+          <p>Conocimiento avanzado en la estructura y semántica de HTML5.</p>
         </div>
-      </div>
-      <div class="card-proyecto">
-        <h3>GuessNum - Juego de adivinar un número</h3>
-        <p>Juego simple desarrollado en Android donde el jugador debe adivinar un número generado aleatoriamente. Ideal para practicar lógica, interfaz de usuario y ciclos en Java.</p>
-        <a class="btn" href="https://github.com/martinatoffoletto/GuessNum" target="_blank">Ver en GitHub</a>
-      </div>
-      <div class="card-proyecto">
-        <h3>Tateti - Tres en línea</h3>
-        <p>Clásico juego de tateti (tres en línea) desarrollado para Android. Se puede jugar contra la máquina. Proyecto enfocado en lógica de juego, interacción con el usuario y diseño móvil.</p>
-        <a class="btn" href="https://github.com/martinatoffoletto/TATETI" target="_blank">Ver en GitHub</a>
-      </div>
+        <div class="habilidad">
+          <h3>CSS</h3>
+          <p>Experiencia en diseño responsivo y preprocesadores como SASS.</p>
+        </div>
+        <div class="habilidad">
+          <h3>JavaScript</h3>
+          <p>Habilidades en programación orientada a objetos y manipulación del DOM.</p>
+        </div>
+        <div class="habilidad">
+          <h3>React</h3>
+          <p>Desarrollo de aplicaciones web interactivas con React.js.</p>
+        </div>
     </section>
+
 
     <section id="contacto" class="contacto">
       <h2>Contacto</h2>
@@ -98,5 +161,6 @@
       <p>&copy; 2025 Martina Toffoletto. Todos los derechos reservados.</p>
     </div>
   </footer>
+  <script src="scripts.js"></script>
 </body>
 </html>
