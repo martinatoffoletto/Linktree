@@ -1,166 +1,301 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Martina Toffoletto</title>
-  <link rel="stylesheet" href="css/estilos.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <nav class="nav-container">
-      <h1 class="logo">Martina Toffoletto</h1>
-      <ul class="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobremi">Sobre mí</a></li>
-        <li><a href="#trabajos">Proyectos</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section id="inicio" class="inicio-portada">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Martina Toffoletto</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav-container">
+        <h1 class="logo">Martina Toffoletto</h1>
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#trabajos">Proyectos</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="inicio" class="inicio-portada">
         <div class="overlay"></div>
         <div class="portada-contenido">
           <h1>¡Hola! Soy Martina</h1>
-          <p>Estudiante de Ingeniería Informática, enfocada en desarrollo web y diseño de experiencias digitales.</p>
-          <a href="static/martin_toffoletto_cv.pdf" class="btn" download>Descargar CV</a>
+          <p>
+            Estudiante de Ingeniería Informática, enfocada en desarrollo web y
+            diseño de experiencias digitales.
+          </p>
+          <a href="static/martin_toffoletto_cv.pdf" class="btn" download
+            >Descargar CV</a
+          >
         </div>
-    </section>
-    <section id="sobre-mi" class="sobre-mi">
-      <div class="contenedor-sobre-mi">
-        <div class="foto-sobre-mi">
-          <img src="static/foto.jpg" alt="Foto de Martina Toffoletto" />
-        </div>
-        <div class="texto-sobre-mi">
-          <h2>Sobre mí</h2>
-          <p>Mi nombre es Martina Toffoletto. Actualmente estoy estudiando Ingeniería Informática y me interesa todo lo relacionado con el desarrollo de software, la experiencia de usuario, y la tecnología en general.</p>
-          <p>Disfruto aprender nuevas herramientas, participar en proyectos creativos, y desarrollar soluciones útiles que combinen lógica y diseño. Me considero curiosa, detallista, y con ganas de seguir creciendo profesionalmente.</p>
-          <p>En esta web vas a encontrar algunos de mis trabajos destacados, ejercicios interactivos, habilidades técnicas y formas de contactarme.</p>
-        </div>
-      </div>
-    </section>
-    <section id="trabajos" class="proyectos" style="max-width: 480px; margin: 40px auto; font-family: Arial, sans-serif;">
-      <h2 style="text-align:center; margin-bottom: 25px;">Mis Proyectos</h2>
+      </section>
+      <section id="sobre-mi" class="sobre-mi">
+        <h2>Sobre mí</h2>
+        <div class="contenedor-sobre-mi">
+          <div class="bloque-principal">
+            <div class="foto-sobre-mi">
+              <img src="static/foto.jpg" alt="Foto de Martina Toffoletto" />
+            </div>
+            <div class="texto-sobre-mi">
+              <p>
+                ¡Hola! Soy Martina Toffoletto, estudiante de Ingeniería Informática con
+                pasión por el diseño de experiencias digitales y el desarrollo de
+                soluciones tecnológicas creativas.
+              </p>
+              <p>
+                Me interesa especialmente el desarrollo web, el diseño centrado en el
+                usuario (UX/UI), y el impacto positivo que puede tener la tecnología en la
+                vida cotidiana.
+              </p>
+              <p>
+                Estoy en constante aprendizaje, disfruto los desafíos y me gusta trabajar
+                en proyectos donde se combina la lógica con la estética.
+              </p>
+            </div>
+          </div>
 
-      <div class="btn-group">
-        <button class="btn toggle-btn" data-target="calculadora">Calculadora</button>
-        <button class="btn toggle-btn" data-target="galeria">Galería</button>
-        <button class="btn toggle-btn" data-target="botonera">Botonera de Sonidos</button>
-      </div>
+          <aside class="lista-personal">
+            <ul>
+              <li><strong>Edad:</strong> 22 años</li>
+              <li><strong>Ciudad:</strong> Buenos Aires, Argentina</li>
+              <li><strong>Idiomas:</strong> Español, Inglés (intermedio)</li>
+            </ul>
+          </aside>
 
-      <!-- CALCULADORA Modal -->
-      <div id="calculadora" class="modal" role="dialog" aria-modal="true" aria-labelledby="titulo-calculadora">
-        <div class="modal-content">
-          <button class="modal-close" aria-label="Cerrar">&times;</button>
-          <h3 id="titulo-calculadora">Calculadora</h3>
-          <input type="text" id="pantalla" readonly>
-          <div class="teclado">
-            <button class="btn-calc" data-valor="7">7</button>
-            <button class="btn-calc" data-valor="8">8</button>
-            <button class="btn-calc" data-valor="9">9</button>
-            <button class="btn-calc" data-valor="/">÷</button>
-            <button class="btn-calc" data-valor="4">4</button>
-            <button class="btn-calc" data-valor="5">5</button>
-            <button class="btn-calc" data-valor="6">6</button>
-            <button class="btn-calc" data-valor="*">×</button>
-            <button class="btn-calc" data-valor="1">1</button>
-            <button class="btn-calc" data-valor="2">2</button>
-            <button class="btn-calc" data-valor="3">3</button>
-            <button class="btn-calc" data-valor="-">−</button>
-            <button class="btn-calc" data-valor="0">0</button>
-            <button class="btn-calc" data-valor=".">.</button>
-            <button class="btn-calc" data-valor="=">=</button>
-            <button class="btn-calc" data-valor="+">+</button>
-            <button class="btn-calc" data-valor="C">C</button>
+        </div>
+      </section>
+
+
+      <section id="trabajos" class="proyectos">
+        <h2 style="text-align: center; margin-bottom: 25px">Mis Proyectos</h2>
+        <p class="intro-proyectos">
+          Estos son algunos de los proyectos en los que estuve trabajando. Todos fueron desarrollados con HTML, CSS y JavaScript.
+        </p>
+
+        <div class="btn-group">
+          <button class="btn toggle-btn" data-target="calculadora">
+            <i class="fas fa-calculator"></i> Calculadora
+          </button>
+          <button class="btn toggle-btn" data-target="galeria">
+            <i class="fas fa-images"></i> Galería
+          </button>
+          <button class="btn toggle-btn" data-target="botonera">
+            <i class="fas fa-music"></i> Botonera de Sonidos
+          </button>
+        </div>
+
+        <!-- CALCULADORA Modal -->
+        <div
+          id="calculadora"
+          class="modal"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="titulo-calculadora"
+        >
+          <div class="modal-content">
+            <button class="modal-close" aria-label="Cerrar">&times;</button>
+            <h3 id="titulo-calculadora">Calculadora</h3>
+
+            <div class="pantalla-con-clear">
+              <input type="text" id="pantalla" readonly />
+              <button class="btn-clear" data-valor="C">C</button>
+
+            </div>
+
+            <div class="teclado">
+              <button class="btn-calc" data-valor="7">7</button>
+              <button class="btn-calc" data-valor="8">8</button>
+              <button class="btn-calc" data-valor="9">9</button>
+              <button class="btn-calc" data-valor="/">÷</button>
+              <button class="btn-calc" data-valor="4">4</button>
+              <button class="btn-calc" data-valor="5">5</button>
+              <button class="btn-calc" data-valor="6">6</button>
+              <button class="btn-calc" data-valor="*">×</button>
+              <button class="btn-calc" data-valor="1">1</button>
+              <button class="btn-calc" data-valor="2">2</button>
+              <button class="btn-calc" data-valor="3">3</button>
+              <button class="btn-calc" data-valor="-">−</button>
+              <button class="btn-calc" data-valor="0">0</button>
+              <button class="btn-calc" data-valor=".">.</button>
+              <button class="btn-calc" data-valor="=">=</button>
+              <button class="btn-calc" data-valor="+">+</button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- GALERÍA Modal -->
-      <div id="galeria" class="modal" role="dialog" aria-modal="true" aria-labelledby="titulo-galeria">
-        <div class="modal-content">
-          <button class="modal-close" aria-label="Cerrar">&times;</button>
-          <h3 id="titulo-galeria">Galería de Imágenes</h3>
-          <img id="imagen-galeria" src="" alt="Imagen de galería" />
-          <div class="galeria-botones-container">
-            <button id="btn-anterior" class="btn">Anterior</button>
-            <button id="btn-siguiente" class="btn">Siguiente</button>
+        <!-- GALERÍA Modal -->
+        <div
+          id="galeria"
+          class="modal"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="titulo-galeria"
+        >
+          <div class="modal-content">
+            <button class="modal-close" aria-label="Cerrar">&times;</button>
+            <h3 id="titulo-galeria">Galería de Imágenes</h3>
+            <img id="imagen-galeria" src="" alt="Imagen de galería" />
+            <div class="galeria-botones-container">
+              <button id="btn-anterior" class="btn">Anterior</button>
+              <button id="btn-siguiente" class="btn">Siguiente</button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- BOTONERA DE SONIDOS Modal -->
-      <div id="botonera" class="modal" role="dialog" aria-modal="true" aria-labelledby="titulo-botonera">
-        <div class="modal-content">
-          <button class="modal-close" aria-label="Cerrar">&times;</button>
-          <h3 id="titulo-botonera">Botonera de Sonidos</h3>
-          <div class="btn-group">
-            <button id="btn-sonido1" class="btn">Sonido 1</button>
-            <button id="btn-sonido2" class="btn">Sonido 2</button>
-            <button id="btn-sonido3" class="btn">Sonido 3</button>
+        <!-- BOTONERA DE SONIDOS Modal -->
+        <div
+          id="botonera"
+          class="modal"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="titulo-botonera"
+        >
+          <div class="modal-content">
+            <button class="modal-close" aria-label="Cerrar">&times;</button>
+            <h3 id="titulo-botonera">Botonera de Sonidos</h3>
+            <div class="btn-group">
+              <button id="btn-sonido1" class="btn">Sonido 1</button>
+              <button id="btn-sonido2" class="btn">Sonido 2</button>
+              <button id="btn-sonido3" class="btn">Sonido 3</button>
+            </div>
           </div>
-          <!-- Botón mute generado desde JS -->
         </div>
+      </section>
+
+      <section id="habilidades" class="habilidades">
+        <h2>Habilidades Técnicas</h2>
+        <div class="habilidades-container">
+          <div class="habilidad">
+            <h3>HTML</h3>
+            <p>Conocimiento avanzado en la estructura y semántica de HTML5.</p>
+            <div class="barra-progreso">
+              <div class="barra-progreso-fill" style="width: 70%"></div>
+            </div>
+            <div class="barra-porcentaje">70%</div>
+          </div>
+          <div class="habilidad">
+            <h3>CSS</h3>
+            <p>Experiencia en diseño responsivo y preprocesadores como SASS.</p>
+            <div class="barra-progreso">
+              <div class="barra-progreso-fill" style="width: 65%"></div>
+            </div>
+            <div class="barra-porcentaje">65%</div>
+          </div>
+          <div class="habilidad">
+            <h3>JavaScript</h3>
+            <p>
+              Habilidades en programación orientada a objetos y manipulación del
+              DOM.
+            </p>
+            <div class="barra-progreso">
+              <div class="barra-progreso-fill" style="width: 80%"></div>
+            </div>
+            <div class="barra-porcentaje">80%</div>
+          </div>
+          <div class="habilidad">
+            <h3>React</h3>
+            <p>Desarrollo de aplicaciones web interactivas con React.js.</p>
+            <div class="barra-progreso">
+              <div class="barra-progreso-fill" style="width: 75%"></div>
+            </div>
+            <div class="barra-porcentaje">75%</div>
+          </div>
+          <div class="habilidad">
+            <h3>Python</h3>
+            <p>
+              Programación versátil para análisis de datos, automatización y
+              backend.
+            </p>
+            <div class="barra-progreso">
+              <div class="barra-progreso-fill" style="width: 85%"></div>
+            </div>
+            <div class="barra-porcentaje">85%</div>
+          </div>
+          <div class="habilidad">
+            <h3>Java</h3>
+            <p>
+              Programación orientada a objetos y desarrollo de aplicaciones
+              multiplataforma.
+            </p>
+            <div class="barra-progreso">
+              <div class="barra-progreso-fill" style="width: 70%"></div>
+            </div>
+            <div class="barra-porcentaje">70%</div>
+          </div>
+
+      </section>
+
+      <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <p>
+          ¿Querés ponerte en contacto conmigo? Completá el siguiente formulario:
+        </p>
+        <form
+          action="https://formsubmit.co/tuemail@example.com"
+          method="POST"
+          class="form-contacto"
+        >
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div
+          class="social-links"
+          role="navigation"
+          aria-label="Redes sociales de Martina"
+        >
+          <a
+            href="https://github.com/martinatoffoletto"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub de Martina Toffoletto"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/martinatoffoletto"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn de Martina Toffoletto"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="../index.html" aria-label="Linktree de Martina Toffoletto">
+            <i class="fas fa-link"></i>
+          </a>
+        </div>
+        <p>&copy; 2025 Martina Toffoletto. Todos los derechos reservados.</p>
       </div>
-    </section>
+    </footer>
 
-    <section id="habilidades" class="habilidades">
-      <h2>Habilidades Técnicas</h2>
-      <div class="habilidades-container">
-        <div class="habilidad">
-          <h3>HTML</h3>
-          <p>Conocimiento avanzado en la estructura y semántica de HTML5.</p>
-        </div>
-        <div class="habilidad">
-          <h3>CSS</h3>
-          <p>Experiencia en diseño responsivo y preprocesadores como SASS.</p>
-        </div>
-        <div class="habilidad">
-          <h3>JavaScript</h3>
-          <p>Habilidades en programación orientada a objetos y manipulación del DOM.</p>
-        </div>
-        <div class="habilidad">
-          <h3>React</h3>
-          <p>Desarrollo de aplicaciones web interactivas con React.js.</p>
-        </div>
-    </section>
-
-
-    <section id="contacto" class="contacto">
-      <h2>Contacto</h2>
-      <p>¿Querés ponerte en contacto conmigo? Completá el siguiente formulario:</p>
-      <form action="https://formsubmit.co/tuemail@example.com" method="POST" class="form-contacto">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" required>
-
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-
-        <button type="submit" class="btn">Enviar</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-content">
-      <div class="social-links">
-        <a href="https://github.com/martinatoffoletto" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/martinatoffoletto" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="linktree.html"><i class="fas fa-link"></i></a>
-      </div>
-      <p>&copy; 2025 Martina Toffoletto. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-  <script src="scripts.js"></script>
-</body>
+    <script src="scripts.js"></script>
+  </body>
 </html>

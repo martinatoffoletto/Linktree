@@ -3,17 +3,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleBtns = document.querySelectorAll(".toggle-btn");
   const modales = document.querySelectorAll(".modal");
 
-  toggleBtns.forEach(btn => {
+  toggleBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
       const objetivo = btn.dataset.target;
-      modales.forEach(modal => {
-        if(modal.id === objetivo){
-          // Mostrar modal si está oculto, sino cerrar
-          if(modal.style.display === "flex"){
+      modales.forEach((modal) => {
+        if (modal.id === objetivo) {
+          if (modal.style.display === "flex") {
             modal.style.display = "none";
           } else {
-            // cerrar otros
-            modales.forEach(m => m.style.display = "none");
+            modales.forEach((m) => (m.style.display = "none"));
             modal.style.display = "flex";
           }
         } else {
@@ -24,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Botón cerrar modal
-  modales.forEach(modal => {
+  modales.forEach((modal) => {
     const closeBtn = modal.querySelector(".modal-close");
     closeBtn.addEventListener("click", () => {
       modal.style.display = "none";
@@ -32,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Cerrar modal clickeando fuera del contenido
     modal.addEventListener("click", (e) => {
-      if(e.target === modal){
+      if (e.target === modal) {
         modal.style.display = "none";
       }
     });
@@ -42,13 +40,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const pantalla = document.getElementById("pantalla");
   const botonesCalc = document.querySelectorAll(".btn-calc");
 
-  botonesCalc.forEach(btn => {
+  botonesCalc.forEach((btn) => {
     btn.addEventListener("click", () => {
       const valor = btn.dataset.valor;
 
       if (valor === "=") {
         try {
-          // Evalua expresion matematica segura
           pantalla.value = eval(pantalla.value);
         } catch {
           pantalla.value = "Error";
@@ -62,11 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // --- Galería ---
-  const galeria = [
-    "static/ny1.jpg",
-    "static/ny2.jpg",
-    "static/ny3.jpg"
-  ];
+  const galeria = ["static/ny1.jpg", "static/ny2.jpg", "static/ny3.jpg"];
   let index = 0;
 
   const imagen = document.getElementById("imagen-galeria");
@@ -90,58 +83,30 @@ document.addEventListener("DOMContentLoaded", () => {
   mostrarImagen();
 
   // --- Botonera de Sonidos ---
-  const sonidos = {
-    "btn-sonido1": "static/sonido1.mp3",
-    "btn-sonido2": "static/sonido2.mp3",
-    "btn-sonido3": "static/sonido3.mp3"
-  };
+  const botones = [
+    { id: "btn-sonido1", audioSrc: "static/sonido1.mp3" },
+    { id: "btn-sonido2", audioSrc: "static/sonido2.mp3" },
+    { id: "btn-sonido3", audioSrc: "static/sonido3.mp3" },
+  ];
 
-  const botonesSonido = {};
-  const audios = {};
-  let mute = false;
-  let btnMute;
+  botones.forEach(({ id, audioSrc }) => {
+    const btn = document.getElementById(id);
+    if (!btn) return;
 
-  // Crear audio y almacenar referencias
-  Object.keys(sonidos).forEach(id => {
-    const boton = document.getElementById(id);
-    const audio = new Audio(sonidos[id]);
-    botonesSonido[id] = boton;
-    audios[id] = audio;
+    const audio = new Audio(audioSrc);
 
-    boton.addEventListener("click", () => {
-      if(mute) return; // si está muteado no reproduce
-
-      // Reset audio
-      audio.currentTime = 0;
-      audio.play();
-
-      // Quitar clase active a todos
-      Object.values(botonesSonido).forEach(b => b.classList.remove("active"));
-      // Marcar activo el botón presionado
-      boton.classList.add("active");
+    btn.addEventListener("click", () => {
+      if (!audio.paused) {
+        audio.pause();
+        audio.currentTime = 0;
+      } else {
+        audio.currentTime = 0;
+        audio.play();
+      }
     });
+
+    btn.addEventListener("mousedown", () => (btn.style.opacity = "0.8"));
+    btn.addEventListener("mouseup", () => (btn.style.opacity = "1"));
+    btn.addEventListener("mouseleave", () => (btn.style.opacity = "1"));
   });
-
-  // Crear botón mute dinámicamente y agregar al DOM botonera
-  btnMute = document.createElement("button");
-  btnMute.id = "btn-mute";
-  btnMute.className = "btn";
-  btnMute.textContent = "Mutear";
-  const botoneraDiv = document.querySelector("#botonera .btn-group");
-  botoneraDiv.parentNode.appendChild(btnMute);
-
-  btnMute.addEventListener("click", () => {
-    mute = !mute;
-    if(mute){
-      btnMute.textContent = "Desmutear";
-      btnMute.classList.add("muted");
-      // Pausar todos los audios y quitar activo
-      Object.values(audios).forEach(audio => audio.pause());
-      Object.values(botonesSonido).forEach(b => b.classList.remove("active"));
-    } else {
-      btnMute.textContent = "Mutear";
-      btnMute.classList.remove("muted");
-    }
-  });
-
 });
