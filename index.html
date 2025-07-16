@@ -2,20 +2,30 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mis Proyectos - Linktree</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="linktree-card">
+    <main class="linktree-card" aria-label="Lista de proyectos personales">
       <h1>🌷 Mis Proyectos</h1>
-      <div class="enlaces">
-        <a href="tp1_Identikit/index.html">🧬 Identikit</a>
-        <a href="tp2_blog_personal/index.html">📝 Blog personal</a>
-        <a href="tp3_portafolio/index.html"> Portafolio</a>
-      </div>
-    </div>
+      <nav class="enlaces" role="navigation" aria-label="Enlaces a proyectos">
+        <a href="tp1_Identikit/index.html" rel="noopener noreferrer"
+          >🧬 Identikit</a
+        >
+        <a href="tp2_blog_personal/index.html" rel="noopener noreferrer"
+          >📝 Blog personal</a
+        >
+        <a href="tp3_portafolio/index.html" rel="noopener noreferrer"
+          >📁 Portafolio</a
+        >
+      </nav>
+    </main>
   </body>
 </html>
