@@ -7,10 +7,8 @@
     <link rel="stylesheet" href="css/estilos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/brands/fort-awesome.svg" type="image/svg+xml" />
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon.ico" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -22,13 +20,20 @@
     <header>
       <nav class="nav-container">
         <h1 class="logo">Martina Toffoletto</h1>
-        <ul class="nav-links">
+        <!-- Botón hamburguesa visible solo en móvil -->
+        <button id="btn-menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-lateral">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Menú normal -->
+        <ul class="nav-links" id="menu-lateral">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#sobre-mi">Sobre mí</a></li>
           <li><a href="#trabajos">Proyectos</a></li>
           <li><a href="#habilidades">Habilidades</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
+
       </nav>
     </header>
     <main>
@@ -244,7 +249,8 @@
       <section id="contacto" class="contacto">
         <h2>Contacto</h2>
         <p>
-          ¿Querés ponerte en contacto conmigo? Completá el siguiente formulario:
+          ¿Querés ponerte en contacto conmigo? 
+          Completá el siguiente formulario:
         </p>
         <form
           action="https://formsubmit.co/tuemail@example.com"

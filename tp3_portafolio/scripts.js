@@ -36,9 +36,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // --- Botón Hamburguesa ---
+  const btnMenu = document.getElementById("btn-menu");
+  const menuLateral = document.getElementById("menu-lateral");
+
+  btnMenu.addEventListener("click", () => {
+    const isOpen = menuLateral.classList.toggle("open");
+    btnMenu.setAttribute("aria-expanded", isOpen);
+  });
+
+  menuLateral.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menuLateral.classList.remove("open");
+      btnMenu.setAttribute("aria-expanded", "false");
+    });
+  });
+
   // --- Calculadora ---
   const pantalla = document.getElementById("pantalla");
   const botonesCalc = document.querySelectorAll(".btn-calc");
+  const btnClear = document.querySelector(".btn-clear");
 
   botonesCalc.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -50,12 +67,14 @@ document.addEventListener("DOMContentLoaded", () => {
         } catch {
           pantalla.value = "Error";
         }
-      } else if (valor === "C") {
-        pantalla.value = "";
       } else {
         pantalla.value += valor;
       }
     });
+  });
+
+  btnClear.addEventListener("click", () => {
+    pantalla.value = "";
   });
 
   // --- Galería ---
