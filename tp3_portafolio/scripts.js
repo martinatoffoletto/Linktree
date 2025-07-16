@@ -52,6 +52,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // --- Formulario de Contacto ---
+  const form = document.querySelector(".form-contacto");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    form.reset();
+  });
+
   // --- Calculadora ---
   const pantalla = document.getElementById("pantalla");
   const botonesCalc = document.querySelectorAll(".btn-calc");
