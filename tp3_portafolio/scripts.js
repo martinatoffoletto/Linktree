@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Toggle modales: solo uno visible a la vez
+  // --- Inicializar EmailJS ---
+  emailjs.init("UhITunAni8Lp8ewCU");
+
+  // Toggle modales
   const toggleBtns = document.querySelectorAll(".toggle-btn");
   const modales = document.querySelectorAll(".modal");
 
@@ -21,14 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Botón cerrar modal
   modales.forEach((modal) => {
     const closeBtn = modal.querySelector(".modal-close");
     closeBtn.addEventListener("click", () => {
       modal.style.display = "none";
     });
-
-    // Cerrar modal clickeando fuera del contenido
     modal.addEventListener("click", (e) => {
       if (e.target === modal) {
         modal.style.display = "none";
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // --- Botón Hamburguesa ---
+  // Hamburguesa
   const btnMenu = document.getElementById("btn-menu");
   const menuLateral = document.getElementById("menu-lateral");
 
@@ -52,15 +52,33 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // --- Formulario de Contacto ---
-  const form = document.querySelector(".form-contacto");
+  // Formulario contacto
+  const form = document.getElementById("formulario-contacto");
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    form.reset();
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Agregar fecha oculta
+    const dateField = document.createElement("input");
+    dateField.type = "hidden";
+    dateField.name = "date";
+    dateField.value = new Date().toLocaleString();
+    form.appendChild(dateField);
+
+    // Enviar con EmailJS
+    emailjs
+      .sendForm("service_ghr6mzq", "template_858fgns", form)
+      .then(() => {
+        alert("📬 Mensaje enviado con éxito. ¡Gracias por contactarme!");
+        form.reset();
+      })
+      .catch((error) => {
+        alert("❌ Hubo un error al enviar el mensaje.");
+        console.error("EmailJS error:", error);
+      });
   });
 
-  // --- Calculadora ---
+  // Calculadora
   const pantalla = document.getElementById("pantalla");
   const botonesCalc = document.querySelectorAll(".btn-calc");
   const btnClear = document.querySelector(".btn-clear");
@@ -68,7 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
   botonesCalc.forEach((btn) => {
     btn.addEventListener("click", () => {
       const valor = btn.dataset.valor;
-
       if (valor === "=") {
         try {
           pantalla.value = eval(pantalla.value);
@@ -85,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
     pantalla.value = "";
   });
 
-  // --- Galería ---
+  // Galería
   const galeria = ["static/ny1.jpg", "static/ny2.jpg", "static/ny3.jpg"];
   let index = 0;
 
@@ -109,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   mostrarImagen();
 
-  // --- Botonera de Sonidos ---
+  // Sonidos
   const botones = [
     { id: "btn-sonido1", audioSrc: "static/sonido1.mp3" },
     { id: "btn-sonido2", audioSrc: "static/sonido2.mp3" },

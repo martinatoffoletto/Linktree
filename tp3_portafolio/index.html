@@ -249,17 +249,17 @@
       <section id="contacto" class="contacto">
         <h2>Contacto</h2>
         <p>
-          ¿Querés ponerte en contacto conmigo? 
+          ¿Querés ponerte en contacto conmigo?
           Completá el siguiente formulario:
         </p>
-        <form method="POST" class="form-contacto">
+        <form id="formulario-contacto" class="form-contacto">
           <label for="nombre">Nombre</label>
           <input type="text" id="nombre" name="nombre" required />
 
           <label for="email">Correo electrónico</label>
           <input type="email" id="email" name="email" required />
 
-          <label for="mensaje">Mensaje </label>
+          <label for="mensaje">Mensaje</label>
           <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
 
           <button type="submit" class="btn">Enviar</button>
@@ -297,7 +297,7 @@
         <p>&copy; 2025 Martina Toffoletto. Todos los derechos reservados.</p>
       </div>
     </footer>
-
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>
